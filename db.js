@@ -28,3 +28,22 @@ function getAll(store,callback){
   req.onsuccess=()=>callback(req.result);
 }
 
+// Multi Kelas
+{
+ nama:"Budi",
+ nisn:"123",
+ kelas:"3A",
+ ortu:"Andi",
+ wa:"628xxxx"
+}
+
+// Filter Tampilan
+function filterKelas(kelas){
+ getAll("siswa",data=>{
+   const filtered=data.filter(s=>s.kelas===kelas);
+   renderSiswa(filtered);
+ });
+}
+
+// 1A–6C bebas ditambah
+
